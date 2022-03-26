@@ -4,6 +4,8 @@
 #     # put input into main program
 
 class Injury
+    attr_reader :body
     def initialize (body)
+        @body = body
     end
 end

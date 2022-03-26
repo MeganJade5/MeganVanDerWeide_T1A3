@@ -32,9 +32,9 @@ while exit == false
     when "6"
         puts "Exit"
         exit = true
+        system "clear"
     else
         puts "Please choose a valid option"
-        system "clear"
     end
 end
 

@@ -1,12 +1,14 @@
 require './injury'
 
 describe Injury do
+    let(:injury) { Injury.new("knee") }
+
     it 'can be instantiated' do
-        injury = Injury.new("knee")
         expect(injury).not_to be_nil
-        expect(person).to be_an_instance_of Injury
+        expect(injury).to be_an_instance_of Injury
     end
-    it 'returns the injury' do
-        injury = Injury.new("back")
-    end
+    describe '.body' do
+        it 'returns the injury' do
+         expect(injury.body).to eq 'knee'
+        end
 end
