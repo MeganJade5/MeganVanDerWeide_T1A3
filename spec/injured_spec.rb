@@ -1,9 +1,9 @@
-require './injured'
+require './user_input'
 
-describe Injured do
-    let (:injured) {Injured.new("y")}
+describe Input do
+    let (:input) {Input.new("y")}
     
     it 'asks for input only once' do
-        expect(input).not_to be_nil
+        expect(user_input).not_to be_nil
     end
 end

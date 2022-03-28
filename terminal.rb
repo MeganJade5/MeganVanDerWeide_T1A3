@@ -1,9 +1,10 @@
 # hello message
+
 puts 'Hello Trainer'
 exit = false
 while exit == false
-    # while user wants to continue 
-    # execute option menu 
+    # while user wants to continue
+    # execute option menu
     puts 'What would you like to do today?'
 
     # options in terminal
@@ -20,6 +21,7 @@ while exit == false
     case user_choice
     when "1"
         puts "Input a new client"
+        get_input
     when "2"
         puts "View exercise weights info"
     when "3"
@@ -28,7 +30,7 @@ while exit == false
         puts "Update weights amounts"
     when "5"
         puts "Remove a client"
-        # user doesn't want to continue
+    # user doesn't want to continue
     when "6"
         puts "Exit"
         exit = true
@@ -39,16 +41,15 @@ while exit == false
 end
 
 # Input a new client into the system"
-    # let user input details
-    # store
-    # ask injuiry
-    # store
-# give option to look at recommended exercises 
-    # show recommended
-    # show avoid 
+# let user input details
+# store
+# ask injuiry
+# store
+# give option to look at recommended exercises
+# show recommended
+# show avoid
 
-
-    # puts "2. View current clients exercise weights information"
-    # puts "3. View current clients injury information"
-    # puts "4. Update current clients exercise weights amounts"
-    # puts "5. Remove a client from the system"
+# puts "2. View current clients exercise weights information"
+# puts "3. View current clients injury information"
+# puts "4. Update current clients exercise weights amounts"
+# puts "5. Remove a client from the system"
