@@ -1,4 +1,3 @@
-class NewClient
 require 'csv'
 
 # define functions
@@ -19,8 +18,11 @@ while exit == false
 
     case trainer
     when "trainer1"
-        name = get_input('What is the clients name?')
-        puts "Your answer is #{name}"
+        first_name= get_input('What is the clients first name?')
+        puts "Your answer is #{first_name}"
+
+        last_name = get_input('What is the clients last name?')
+        puts "Your answer is #{last_name}"
 
         injury = get_input('Does the client have an injury? Y/N')
         puts "Your answer is #{injury}"
@@ -30,13 +32,16 @@ while exit == false
         puts "Your answer is #{body}"
 
         CSV.open("trainer1.csv", "a+") do |csv|
-             csv << [name, injury, body]
+             csv << [first_name, last_name, injury, body]
         end
     # message of saving - ends
 
     when "trainer2"
-        name = get_input('What is the clients name?')
-        puts "Your answer is #{name}"
+        first_name= get_input('What is the clients first name?')
+        puts "Your answer is #{first_name}"
+
+        last_name = get_input('What is the clients last name?')
+        puts "Your answer is #{last_name}"
 
         injury = get_input('Does the client have an injury? Y/N')
         puts "Your answer is #{injury}"
@@ -46,13 +51,16 @@ while exit == false
         puts "Your answer is #{body}"
 
         CSV.open("trainer2.csv", "a+") do |csv|
-             csv << [name, injury, body]
+             csv << [first_name, last_name, injury, body]
         end
     # message of saving - ends
 
     when "trainer3"
-        name = get_input('What is the clients name?')
-        puts "Your answer is #{name}"
+        first_name= get_input('What is the clients first name?')
+        puts "Your answer is #{first_name}"
+
+        last_name = get_input('What is the clients last name?')
+        puts "Your answer is #{last_name}"
 
         injury = get_input('Does the client have an injury? Y/N')
         puts "Your answer is #{injury}"
@@ -62,7 +70,7 @@ while exit == false
         puts "Your answer is #{body}"
 
         CSV.open("trainer3.csv", "a+") do |csv|
-             csv << [name, injury, body]
+             csv << [first_name, last_name, injury, body]
         end
     # message of saving - ends
 
@@ -73,5 +81,4 @@ while exit == false
     else
             puts "This is not a trainer! Please choose a valid option"
     end
-end
 end
