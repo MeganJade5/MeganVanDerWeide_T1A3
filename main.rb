@@ -115,7 +115,7 @@ when "1"
             csv << [first_name, last_name, injury, body]
         end
 
-    when "Exit"
+    when "exit"
             puts print_fancy("Exit")
             exit = true
             system "clear"
@@ -123,47 +123,43 @@ when "1"
         puts Rainbow("This is not a trainer! Please choose a valid option").red
     end
 
-    # main menu selection 2
-    case user_choice
-    when "2"
-        puts "View current client"
-        # take user to view
-        puts "Which trainers file would you like to access (trainer1, trainer2 or trainer3)?"
-        trainer = gets.chomp
-        puts Rainbow("You selected #{trainer}").salmon
-    end
+# main menu selection 2
+when "2"
+    puts "View current client"
+    # take user to view
+    puts "Which trainers file would you like to access (trainer1, trainer2 or trainer3)?"
+    trainer = gets.chomp
+    puts Rainbow("You selected #{trainer}").salmon
 
-    case viewclient
-    when "trainer1"
-        searchname = user_search('What is the clients last name?')
-        puts "Your answer is #{searchname}"
-        data = CSV.read('trainer1.csv')
-        puts data.find.to_s { |row| row['last_name'] == searchname }
-        p data[1]
+    "trainer1"
+    searchname = user_search('What is the clients last name?')
+    puts "Your answer is #{searchname}"
+    data = CSV.read('trainer1.csv')
+    puts data.find.to_s { |row| row['last_name'] == searchname }
+    p data[1]
 
-    when "trainer2"
-        searchname = user_search('What is the clients last name?')
-        puts "Your answer is #{searchname}"
-        data = CSV.read('trainer2.csv')
-        puts data.find { |row| row['last_name'] == searchname }
-        p data[1]
+    "trainer2"
+    searchname = user_search('What is the clients last name?')
+    puts "Your answer is #{searchname}"
+    data = CSV.read('trainer2.csv')
+    puts data.find { |row| row['last_name'] == searchname }
+    p data[1]
 
-    when "trainer3"
-        searchname = user_search('What is the clients last name?')
-        puts "Your answer is #{searchname}"
-        data = CSV.read('trainer3.csv')
-        puts data.find { |row| row['last_name'] == searchname }
-        p data[1]
+    "trainer3"
+    searchname = user_search('What is the clients last name?')
+    puts "Your answer is #{searchname}"
+    data = CSV.read('trainer3.csv')
+    puts data.find { |row| row['last_name'] == searchname }
+    p data[1]
 
-    when "exit"
-        puts print_fancy("Exit")
-        exit = true
-        system "clear"
-    else
-        puts "This is not a trainer! Please choose a valid option"
-    end
+    "exit"
+    puts print_fancy("Exit")
+    exit = true
+    system "clear"
+end
 
 # main menu selection 3
+case user_choice
 when "3"
     puts "View injury info"
     if Information.list1 == 1
@@ -176,18 +172,4 @@ when "3"
         selection2 = Information.list2
     end
 end
-
-  # when "4"
-  #     puts "Update a client"
-  # end
-  # when "5"
-  #     puts "Remove a client"
-  # end
-  # # user doesn't want to continue
-  # when "6"
-  #     puts print_fancy("Exit")
-  #     exit = true
-  #     system "clear"
-  # else
-  #     puts Rainbow("This is not a trainer! Please choose a valid option").red
 end

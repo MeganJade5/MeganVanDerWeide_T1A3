@@ -1,11 +1,10 @@
 require 'tty-prompt'
-require 'injuryinfo.json'
 
 module Information
     def self.list1
         choices = { do: 1, dont: 2 }
         prompt = TTY::Prompt.new
-        prompt.select('What injuries dos and donts list would you like to view?', choices)
+        prompt.select('Would you like to know the dos or donts for an injury?', choices)
     end
 
     def self.list2
