@@ -1,6 +1,6 @@
 require 'csv'
 
-# define functions
+# get input from user
 def get_input(message)
     print message
     print "\n"

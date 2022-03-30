@@ -24,27 +24,25 @@ while exit == false
 
     case trainer
     when "trainer1"
-        searchname= user_search('What is the clients last name?')
+        searchname = user_search('What is the clients last name?')
         puts "Your answer is #{searchname}"
         data = CSV.read('trainer1.csv')
-        puts data.find.to_s {|row| row['last_name'] == searchname}
-        p data [1]
-    end
+        puts data.find.to_s { |row| row['last_name'] == searchname }
+        p data[1]
 
-        when "trainer2"
-        searchname= user_search('What is the clients last name?')
+    when "trainer2"
+        searchname = user_search('What is the clients last name?')
         puts "Your answer is #{searchname}"
         data = CSV.read('trainer2.csv')
-        puts data.find.to_s {|row| row['last_name'] == searchname}
-        p data [1]
+        puts data.find.to_s { |row| row['last_name'] == searchname }
+        p data[1]
 
-        when "trainer3"
-        searchname= user_search('What is the clients last name?')
+    when "trainer3"
+        searchname = user_search('What is the clients last name?')
         puts "Your answer is #{searchname}"
         data = CSV.read('trainer2.csv')
-        puts data.find.to_s {|row| row['last_name'] == searchname}
-        p data [1]
-    end
+        puts data.find.to_s { |row| row['last_name'] == searchname }
+        p data[1]
 
     when "exit"
             puts "Exit"
@@ -54,8 +52,6 @@ while exit == false
             puts "This is not a trainer! Please choose a valid option"
     end
 end
-
-
 
 # user search name
 
