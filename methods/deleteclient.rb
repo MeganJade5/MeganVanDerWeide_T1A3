@@ -15,6 +15,12 @@ def user_search(message_to_search)
     search_input = gets.chomp
 end
 
+def delete_client(data)
+    table = CSV.table('trainer1.csv')
+    table.delete_if { |row| row[:last_name] == data }
+    File.write('trainer1.csv', table.to_csv)
+end
+
 exit = false
 while exit == false
 
@@ -30,18 +36,21 @@ while exit == false
         puts data.find.to_s { |row| row['last_name'] == searchname }
         p data[1]
 
+        # delete here
+        delete_client(searchname)
+
     when "trainer2"
         searchname = user_search('What is the clients last name?')
         puts "Your answer is #{searchname}"
         data = CSV.read('trainer2.csv')
-        puts data.find.to_s { |row| row['last_name'] == searchname }
+        puts data.find { |row| row['last_name'] == searchname }
         p data[1]
 
     when "trainer3"
         searchname = user_search('What is the clients last name?')
         puts "Your answer is #{searchname}"
-        data = CSV.read('trainer2.csv')
-        puts data.find.to_s { |row| row['last_name'] == searchname }
+        data = CSV.read('trainer3.csv')
+        puts data.find { |row| row['last_name'] == searchname }
         p data[1]
 
     when "exit"
