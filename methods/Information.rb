@@ -1,5 +1,5 @@
 require 'tty-prompt'
-require './files.injuryinfo.json'
+require 'injuryinfo.json'
 
 module Information
     def self.list1
