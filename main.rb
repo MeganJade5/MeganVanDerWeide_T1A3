@@ -4,6 +4,7 @@ require 'tty-font'
 require 'rainbow'
 require 'csv'
 require './methods/Information'
+require 'json'
 
 # get input from user
 def get_input(message)
@@ -169,7 +170,19 @@ when "3"
     else
         system('clear')
         selection1 = 2
-        selection2 = Information.list2
+        selection2 = Information.list3
     end
+    
+    parsed = JSON.load_file('injuryinfo.json', symbolize_names: true)
+    p parsed[:selection1][:selection2]
 end
+
+case user_choice
+when "4"
+    puts "Update current clients information"
+    prompt = TTY::Prompt.new
+    inputs = prompt.select("What would you like to update?",
+                           ["first name", "last name", "Injury Status", "location of injury"])
+
+    end
 end
