@@ -1,107 +1,30 @@
 [
     {
-        "index": 1,
-        "do": [
-            "headdoblah blah blah",
+        "Head":
+            ["headdoblah blah blah",
             "blah blah blah",
             "blah blah blah",
-            "blah!"
-        ],
-        "dont": [
-            "headdontblah blah blah",
-            "blah blah blah",
-            "blah blah blah",
-            "blah!"
-        ]
+            "blah!"]
     },
     {
-        "index": 2,
-        "do": [
+        "Back": [
             "kneckdo2blah blah blah",
             "blah blah blah",
             "blah blah blah",
-            "blah!"
-        ],
-        "dont": [
-            "kneckdont2blah blah blah",
-            "blah blah blah",
-            "blah blah blah",
-            "blah!"
-        ]
+            "blah!"]
     },
     {
-        "index": 3,
-        "do": [
+        "Kneck": [
             "back doblah blah blah",
             "blah blah blah",
             "blah blah blah",
-            "blah!"
-        ],
-        "dont": [
-            "back dont blah blah blah",
-            "blah blah blah",
-            "blah blah blah",
-            "blah!"
-        ]
+            "blah!"]
     },
     {
-        "index": 4,
-        "do": [
+        "Shoulder": [
             "blah blah blah",
             "blah blah blah",
             "blah blah blah",
-            "blah!"
-        ],
-        "dont": [
-            "blah blah blah",
-            "blah blah blah",
-            "blah blah blah",
-            "blah!"
-        ]
-    },
-    {
-        "index": 5,
-        "do": [
-            "blah blah blah",
-            "blah blah blah",
-            "blah blah blah",
-            "blah!"
-        ],
-        "dont": [
-            "blah blah blah",
-            "blah blah blah",
-            "blah blah blah",
-            "blah!"
-        ]
-    },
-    {
-        "index": 6,
-        "do": [
-            "blah blah blah",
-            "blah blah blah",
-            "blah blah blah",
-            "blah!"
-        ],
-        "dont": [
-            "blah blah blah",
-            "blah blah blah",
-            "blah blah blah",
-            "blah!"
-        ]
-    },
-    {
-        "index": 7,
-        "do": [
-            "blah blah blah",
-            "blah blah blah",
-            "blah blah blah",
-            "blah!"
-        ],
-        "dont": [
-            "blah blah blah",
-            "blah blah blah",
-            "blah blah blah",
-            "blah!"
-        ]
+            "blah!"]
     }
 ]

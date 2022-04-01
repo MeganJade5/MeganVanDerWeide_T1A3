@@ -163,18 +163,23 @@ end
 case user_choice
 when "3"
     puts "View injury info"
-    if Information.list1 == 1
-        system('clear')
-        selection1 = 1
-        selection2 = Information.list2
-    else
-        system('clear')
-        selection1 = 2
-        selection2 = Information.list3
+    # if Information.list1 == 1
+    #     system('clear')
+    #     selection1 = 1
+    #     selection2 = Information.list2
+    # else
+    #     system('clear')
+    #     selection1 = 2
+    #     selection2 = Information.list3
+    # end
+    def injurychoices
+        prompt = TTY::Prompt.new
+        choices = { "Head Injury" => 1, "Back Injury" => 2, "Shoulder Injury" => 3 }
+        return prompt.select("Which injury would you like to view more about?", choices)
     end
-    
-    parsed = JSON.load_file('injuryinfo.json', symbolize_names: true)
-    p parsed[:selection1][:selection2]
+
+    parsed = JSON.load_file('injuryinfo.json')
+    p parsed[injurychoices - 1]
 end
 
 case user_choice
@@ -184,5 +189,5 @@ when "4"
     inputs = prompt.select("What would you like to update?",
                            ["first name", "last name", "Injury Status", "location of injury"])
 
-    end
+end
 end
