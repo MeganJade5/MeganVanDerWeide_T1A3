@@ -48,7 +48,7 @@ puts Rainbow('What would you like to do today?').blue
 puts Rainbow("Main Menu:").purple
 print '1. Input a new client into the system', "\n"
 print '2. View current clients information', "\n"
-print '3. View injury information', "\n"
+print '3. Get some injury guidance with a do/dont fact sheet', "\n"
 print '4. Update current clients information', "\n"
 print '5. Remove a client from the system', "\n"
 print '6. Exit', "\n"
@@ -164,7 +164,7 @@ when "1"
     # main menu selection 3
     case user_choice
     when "3"
-        puts "View injury info"
+        puts "Injury guidance facts!"
         def injurychoices
             prompt = TTY::Prompt.new
             choices = { "Head Injury" => 1, "Back Injury" => 2, "Shoulder Injury" => 3 }

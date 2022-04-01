@@ -1,1 +1,33 @@
-help help
+Hello Trainer!
+This is the guide to the application. 
+
+This application is an interactive data base to serve you!
+We aim to give our clients the best possible sessions, so we need to know each client personally. 
+By navigating through the app you will be be able to store and access your clients information.
+There is an option to get some quick injury do's and dont's. 
+
+The application will ask you to type directly into the terminal.
+When this occurs, type into the terminal the answer and hit 'ENTER' on your keyboard. 
+
+If you have troubles typing in your input, it may be that the app doesn't like it.
+If this happens, the app will let you know and allow you to try again. 
+
+There are also menus where you need to make a selection. 
+Use the 'UP/DOWN' arrows to navigate through the options and hit 'ENTER' on your keyboard to confirm.
+
+The app will start by asking you what you, as the trainer would like to do today! 
+    - First option is to input a new client. Once selecting this option, 
+    you will be asked to select which trainers file you would like to add the client to. 
+    We have three trainers to choose from! 
+    Here you will go through a series of prompts for the app to attain the data it needs. 
+    Please note, if the client does not have an injury please put 'N/A' for the area of injury on the body. 
+    - Secondly the app will allow for you to open a trainers file, search for a client and view said clients stored data. 
+    - Thirdly the app will generate a fact sheet of "do's and don'ts" in training said injury selected
+    -The app can also allow for you to update and delete the clients in each of the three trainers files. 
+
+You can also exit the app at any time by hitting 'CTRL C' on your keyboard. This will end the app! 
+
+Lets get training! 
+
+
+
