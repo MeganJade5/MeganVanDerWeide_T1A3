@@ -1,30 +1,26 @@
 [
     {
-        "Head":
-            ["headdoblah blah blah",
-            "blah blah blah",
-            "blah blah blah",
-            "blah!"]
+        "Knee": [
+            "AVOID: Unilateral movements and high impact such as jumping.",
+            "DO: Band work and slow body weight exercises."
+        ]
     },
     {
-        "Back": [
-            "kneckdo2blah blah blah",
-            "blah blah blah",
-            "blah blah blah",
-            "blah!"]
+        "Lower Back": [
+            "AVOID: overloading weights and poor posture.",
+            "DO: Glute activation and band work. Include the exercise 'crab walk.'"
+        ]
     },
     {
         "Kneck": [
-            "back doblah blah blah",
-            "blah blah blah",
-            "blah blah blah",
-            "blah!"]
+            "AVOID: overhead extension and pushing exercises.",
+            "DO: build rhomboid with pulling contractions."
+        ]
     },
     {
-        "Shoulder": [
-            "blah blah blah",
-            "blah blah blah",
-            "blah blah blah",
-            "blah!"]
+        "Wrist": [
+            "AVOID: push ups, writst flexion during bench press and pronated chin ups.",
+            "DO: grip strength testing."
+        ]
     }
 ]

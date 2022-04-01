@@ -167,7 +167,7 @@ when "1"
         puts "Injury guidance facts!"
         def injurychoices
             prompt = TTY::Prompt.new
-            choices = { "Head Injury" => 1, "Back Injury" => 2, "Shoulder Injury" => 3 }
+            choices = { "Knee Injury" => 1, "Lower Back Injury" => 2, "Kneck Injury" => 3, "Wrist Injury" => 3 }
             return prompt.select("Which injury would you like to view more about?", choices)
         end
 
