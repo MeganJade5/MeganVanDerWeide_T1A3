@@ -10,7 +10,26 @@ require './methods/Information'
 require './methods/prompts'
 require './methods/menu'
 
- def input_new_client()
+def get_input(message)
+    print message
+    print "\n"
+    user_input = gets.chomp
+    if user_input.empty?
+    return get_input('Name must not be empty. Please try again: ') do |user_input|
+        end
+    end
+end
+
+begin
+    def user_search(message_to_search)
+        print message_to_search
+        print "\n"
+        search_input = gets.chomp
+        raise (InvalidInputError) if search_input.empty?
+    end
+end
+
+def input_new_client()
     exit = false
     while exit == false
         puts Rainbow("Input a new client").purple
@@ -82,9 +101,10 @@ require './methods/menu'
             end
         else
             puts Rainbow("This is not a trainer! Please choose a valid option").red
-        # retry
         end
-        exit if Prompts.move_on == false && (Prompts.exit == true)
+        if Prompts.move_on == true && (Prompts.exit == true)
+            exit = true
+        end
     end
 end
 
@@ -98,28 +118,34 @@ def view_client
             trainer = gets.chomp
             puts Rainbow("You selected #{trainer}").salmon
 
-            "trainer1"
+        case trainer
+        when "trainer1"
             searchname = user_search('What is the clients last name?')
             puts "Your answer is #{searchname}"
             data = CSV.read('trainer1.csv')
             puts data.find.to_s { |row| row['last_name'] == searchname }
             p data[1]
 
-            "trainer2"
+        when "trainer2"
             searchname = user_search('What is the clients last name?')
             puts "Your answer is #{searchname}"
             data = CSV.read('trainer2.csv')
             puts data.find { |row| row['last_name'] == searchname }
             p data[1]
 
-            "trainer3"
+        when "trainer3"
             searchname = user_search('What is the clients last name?')
             puts "Your answer is #{searchname}"
             data = CSV.read('trainer3.csv')
             puts data.find { |row| row['last_name'] == searchname }
             p data[1]
-
-            exit if Prompts.move_on == false && (Prompts.exit == true)
+        
+        else
+            puts Rainbow("This is not a trainer! Please choose a valid option").red
+        end
+        if Prompts.move_on == true && (Prompts.exit == true)
+            exit = true
+        end
     end
 end
 
@@ -138,7 +164,9 @@ def injury_menu
             parsed = JSON.load_file('injuryinfo.json')
             p parsed[injurychoices - 1]
     end
-    exit if Prompts.move_on == false && (Prompts.exit == true)
+    if Prompts.move_on == true && (Prompts.exit == true)
+        exit = true
+    end
 end
 
 # main menu selection 4
@@ -151,7 +179,8 @@ while exit == false
         trainer = gets.chomp
         puts Rainbow("You selected #{trainer}").salmon
 
-        "trainer1"
+    case trainer
+    when "trainer1"
         searchname = user_search('What is the clients last name that you would like to delete?'.upcase)
         puts Rainbow("Are you sure you want to delete #{searchname}?".upcase).red
         Prompts.continue
@@ -163,7 +192,7 @@ while exit == false
         puts Rainbow("The client has been deleted").red
         delete_client1(searchname)
 
-        "trainer2"
+    when "trainer2"
         searchname = user_search('What is the clients last name that you would like to delete?')
         puts "Are you sure you want to delete #{searchname}?"
         Prompts.continue
@@ -175,7 +204,7 @@ while exit == false
         puts Rainbow("The client has been deleted").red
         delete_client2(searchname)
 
-        "trainer3"
+    when "trainer3"
         searchname = user_search('What is the clients last name that you would like to delete?')
         puts "Are you sure you want to delete #{searchname}?"
         Prompts.continue
@@ -186,8 +215,12 @@ while exit == false
         # delete here
         puts Rainbow("The client has been deleted").red
         delete_client3(searchname)
-
-        exit if Prompts.move_on == false && (Prompts.exit == true)
+    else
+        puts Rainbow("This is not a trainer! Please choose a valid option").red
+    end
+    if Prompts.move_on == true && (Prompts.exit == true)
+        exit = true
+    end
 end
 end
 
