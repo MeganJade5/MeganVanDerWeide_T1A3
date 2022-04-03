@@ -1,4 +1,4 @@
-#Ruby Terminal Application - T1A3
+# Ruby Terminal Application - T1A3
 ## Megan Van Der Weide
 
 ## **Purpose**
@@ -31,39 +31,83 @@ The program consists of three trainers files which can be accessed to view or ad
 ## **Help documentation** 
 **Dependencies**
 The app is dependent on the following gems: 
-TTY Pompt
-TTY Font 
-Rainbow 
-Rspec (for testing) 
+- TTY Pompt
+- TTY Font 
+- Rainbow 
+- Rspec (for testing) 
 
 The Ruby gems adjust the applications colour and styling. This approach aim to keep the users attention to the terminal. In addition the use colour allows for the user to differentiate where they are in the terminal.
 
-    source "https://rubygems.org"
+These are automatically downloaded when you run the app in the terminal using ```./runmain.sh```
+
+source: "https://rubygems.org"
+
+## **Command Line Arguments:**
+Command line arguments are a available for this application.
+--g or --gems : Prints the gems used in the application
+--h or --help : Prints help documentation
+These can be used by running the app directly in the terminal (not the bash script): 
+    ```ruby main.rb [argument]```
+
 
 ## **Application Flow**
 The site navigational flow is through a question answer and/or selection responses from the user. Once the selection or answer is made, the user is provided with the outcome asked. If the incorrect or not recognisable answer or selection is made, the user will find themselves asked the question again or returned to the main menu. 
 
 Please find the link to the application flow diagram:
-<!-- link here!! -->
+
+## Application Flow Diagram
+![Flow Diagram](/docs/flowchart1.png)
+
+## Skeleton Planning Document
+![Skeleton Planning](/docs/skeleton.png)
 
 ## **Implementation Plan (Trello)** 
 The following is the projects implementation plan documented through Trello: 
-<!-- link here!! -->
+[Megans Trello](https://trello.com/b/REkGoUFp/megan-terminal)
 
 ## **User Documentation**
+## Trello 1
+![Trello 1](/docs/Trello1.png)
+
+## Trello 2
+![Trello 1](/docs/Trello2.png)
+
+## Trello 3
+![Trello 1](/docs/Trello3.png)
+
+## Trello 4
+![Trello 1](/docs/Trello4.png)
+
+## Trello 5
+![Trello 1](/docs/Trello5.png)
+
+## Trello 6
+![Trello 1](/docs/Trello6.png)
 
 **Instructions for installing the terminal are as followed:** 
 1. Ensure that you have the latest version of Ruby on your computer. 
    *Please follow the instructions of installing Ruby if required.* 
-    https://www.ruby-lang.org/en/documentation/installation/
+    **Ruby Doc:** [Ruby documents](https://www.ruby-lang.org/en/documentation/installation/)
 2. Whilst using a Mac computer, run the application by entering the following line into your terminal: 
-   <!-- link here!!  -->
+   ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/aidenwaring/helpdesk_terminal/master/src/shell.sh)" ```
+
+   There are a few options to start the application: 
+   Running the following: ```ruby runmain.sh```
+   Running the following: ```ruby main.rb```
+
 
 **Alternatively follow the below steps:** 
 1. Download application files through Github link source: 
-   <!-- link here!! -->
+   [Megans Github](https://github.com/MeganJade5/MeganVanDerWeide_T1A3/tree/master)
+   It can be installed by clicking on the "Code" button at the top of this page. Clone this repository or download it and then unzip.
+
 2. Open your terminal and navigate to the directory helpdesk_terminal that the files were cloned to
-3. Run the following common in your terminal:
-    ```Bundle install```
-4. Navigate to the ‘src’ subfolder and run: 
-    ```Ruby main.rb```
+   
+3. Run the following common in your terminal, please skip if you already have this installed:
+    ```bundle install```
+
+4. Navigate and run: 
+    ```ruby runmain.sh```
+
+If you are not sure how to access terminal on your computer, check out the following article for "opening command line".
+[Command Line](https://towardsdatascience.com/a-quick-guide-to-using-command-line-terminal-96815b97b955)
