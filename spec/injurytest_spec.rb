@@ -11,4 +11,5 @@ describe Injury do
         it 'returns the injury' do
          expect(injury.body).to eq 'knee'
         end
+    end
 end

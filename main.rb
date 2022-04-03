@@ -25,7 +25,9 @@ begin
         print message_to_search
         print "\n"
         search_input = gets.chomp
-        raise (InvalidInputError) if search_input.empty?
+        if search_input.empty?
+        return get_input('Name must not be empty. Please try again: ') do |search_input|
+            end
     end
 end
 
@@ -285,5 +287,6 @@ loop do
         when "5"
             exit
         end
+end
 end
 end

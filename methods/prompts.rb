@@ -8,7 +8,7 @@ module Prompts
     
     def self.exit
         prompt = TTY::Prompt.new
-        prompt.yes?('Would you like to exit the application')
+        prompt.yes?('Would you like to exit this option and return to the main menu?')
     end
 
     def self.help
