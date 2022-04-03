@@ -1,4 +1,4 @@
-# Ruby Terminal Application - T1A3
+# **Ruby Terminal Application - T1A3**
 ## Megan Van Der Weide
 
 ## **Purpose**
@@ -89,7 +89,7 @@ The following is the projects implementation plan documented through Trello:
    *Please follow the instructions of installing Ruby if required.* 
     **Ruby Doc:** [Ruby documents](https://www.ruby-lang.org/en/documentation/installation/)
 2. Whilst using a Mac computer, run the application by entering the following line into your terminal: 
-   ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/aidenwaring/helpdesk_terminal/master/src/shell.sh)" ```
+   ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/MeganJade5/MeganVanDerWeide_T1A3/master/runmain.sh)" ```
 
    There are a few options to start the application: 
    Running the following: ```ruby runmain.sh```
